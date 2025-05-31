@@ -1,11 +1,8 @@
-# Imagen base de Java
+#Base image of Java17
 FROM openjdk:17-jdk-slim
-
-# Carpeta de trabajo dentro del contenedor
+#Work folder inside the directory.
 WORKDIR /app
-
-# Copiar el JAR compilado
+#Jar
 COPY target/demo-0.0.1-SNAPSHOT.jar app.jar
-
-# Comando para ejecutar la app
+#Execution comand
 ENTRYPOINT ["java", "-jar", "app.jar"]
